@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Family</title>
+        <link rel="stylesheet" href="styles.css.css">
+    </head>
+    <div class="container">
+        <div class="contents" style="align-content: center;">
+        <a class="center" href="index.html"><button>Home</button></a>
+        <a class="center" href="images.html"><button>Family</button></a>
+        <a class="center" href="Experiences.html"><button>Experiences</button></a>
+        <a class="center" href="Autobiography.html"><button>Autobiography</button></a>
+        </div>
+      </div>
+    <div class="tabs">
+        <div class="sidebar">
+          <!-- tabs buttons  -->
+          <button class="tab-btn tab-btn-active" data-for-tab="1">Kali (bird) Goff</button>
+          <button class="tab-btn" data-for-tab="2">Zed Mac-Gealai</button>
+          <button class="tab-btn" data-for-tab="3">Dawn Serenity Moonsong</button>
+          <button class="tab-btn" data-for-tab="4">Bishop E.J. Goff</button>
+        </div>
+        <!-- tabs content  -->
+        <div class="content">
+          <div class="tab-content tab-content-active" data-tab="1">
+            <p style="text-align: center;"> Kali (bird) Goff is a <a href="https://en.wikipedia.org/wiki/Pit_bull">Pitbull</a> that is about 75lbs and can run over 40mph.<br> She is a brindle boxer pit mix and she is the most loved sibling in the house </p>
+            <img style="height: 300px;" src="images/grasskali.jpg">
+             <img style="height: 300px;" src="images/kalitoy.jpg">
+             <img style="height: 300px;" src="images/kalitree.jpg"> 
+             <br>
+             <img style="height: 300px;" src="images/kali on mac.jpg">
+             <img style="height: 300px;" src="images/kalicorn.jpg">
+             <img style="height: 300px" src="images/kalitongue.jpg">
+             
+          </div>
+          <div class="tab-content" data-tab="2">
+            <p style="text-align: center;">Mac Gealai is my father.<br> He was born in 1981 and he has spent his entire life trying to help people.<br> He is very experienced with psychedelics and drugs in general. <br>He wants to be a <a href="https://www.frontiersin.org/articles/10.3389/fphar.2018.00733/full">Psychadelic Assisted Therapist(PAT)</a>, and is currently alpha of the pack.</p>
+            <img style="height:300px;" src="images/macface.jpg">
+            <img style="height:300px;" src="images/All of us.jpg">
+            <img style="height:300px;" src="images/macpic.jpg">
+            <br>
+            <img style="height:300px;" src="images/macfm.jpg">
+            <img style="height:300px;" src="images/fambly.jpg">
+            <img style="height:300px;" src="images/mac2.jpg">
+        
+          </div>
+          <div class="tab-content" data-tab="3">
+            <p style="text-align: center;">Dawn Moonsong is my mother.<br> She was also born in 1981 and she spent her school years studying nursing. <br> She worked her entire life to support my existence and I have her to thank. <br> She is an integral part of the family as she 1 pays the bills and 2 is the glue holding our family together. <br> She also has been the one to give me most of my <a href="experiences.html">experiences.</a></p>
+            <img style="height:300px;" src="images/dawn and mac.jpeg">
+            <img style="height:300px;" src="images/snowmom.jpg">
+            <img style="height:300px;" src="images/dawn2.jpeg">
+            <br>
+            <img style="height:300px;" src="images/bluemom.jpg">
+            <img style="height:300px;" src="images/fambly.jpg">
+            <img style="height:300px" src="images/Momjoint.jpg">
+          </div> 
+        <div class="tab-content" data-tab="4">
+            <p style="text-align:center;">I am Bishop goff. <br>I have had quite the potential and quite the fun.<br> My life so far has been about learning science and math.<br> I also focus on finding myself more often than I should.<br> I may be lower than Kali on the pack scale.</p>
+            <img style="height: 300px;" src="images/Boydonut.jpg">
+            <img style="height: 300px;" src="images/boy6.jpg">
+            <img style="height: 300px;" src="images/boy5.jpg">
+            <br>
+            <img style="height: 300px;" src="images/boy4.jpg">
+            <img style="height: 300px;" src="images/boy3.png">
+            <img style="height: 300px;" src="images/boy2.jpg">
+            
+
+
+          </div>
+    
+        </div>
+      </div>
+      
+      <script> 
+      function setupTabs() {
+        document.querySelectorAll(".tab-btn").forEach((button) => {
+          button.addEventListener("click", () => {
+            const sidebar = button.parentElement;
+            const tabs = sidebar.parentElement;
+            const tabNumber = button.dataset.forTab;
+            const tabActivate = tabs.querySelector(
+              `.tab-content[data-tab="${tabNumber}"]`
+            );
+      
+            sidebar.querySelectorAll(".tab-btn").forEach((button) => {
+              button.classList.remove("tab-btn-active");
+            });
+            tabs.querySelectorAll(".tab-content").forEach((tab) => {
+              tab.classList.remove("tab-content-active");
+            });
+            button.classList.add("tab-btn-active");
+            tabActivate.classList.add("tab-content-active");
+          });
+        });
+      }
+      
+      document.addEventListener("DOMContentLoaded", () => {
+        setupTabs();
+      });
+      </script>
+</html>
 
